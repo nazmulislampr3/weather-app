@@ -6,8 +6,8 @@ import {
   useState,
 } from "react";
 import { createContext, useContextSelector } from "use-context-selector";
-import { SearchParams, Weather, WeatherError, WeatherType } from "../types";
 import getWeather from "../services/getWeather";
+import { SearchParams, Weather, WeatherError, WeatherType } from "../types";
 
 const weatherContext = createContext<{
   weather: WeatherType;
@@ -27,10 +27,10 @@ const WeatherContextProvider = ({ children }: { children: ReactNode }) => {
     if (searchParams.q || (searchParams.lat && searchParams.lon)) {
       getWeather(searchParams).then((res) => {
         if (res.message) {
-          setError(res);
+          setError(res as WeatherError);
           setWeather(null);
         } else {
-          setWeather(res);
+          setWeather(res as Weather);
           setError(null);
         }
       });
