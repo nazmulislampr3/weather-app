@@ -26,7 +26,7 @@ const WeatherContextProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (searchParams.q || (searchParams.lat && searchParams.lon)) {
       getWeather(searchParams).then((res) => {
-        if (res.message) {
+        if ((res as WeatherError).message) {
           setError(res as WeatherError);
           setWeather(null);
         } else {
