@@ -112,7 +112,9 @@ const getWeather = async (
     temp_max: `${temp_max.toFixed()} °${temperatureUnit}`,
     temp_min: `${temp_min.toFixed()} °${temperatureUnit}`,
     time: formatTime(dt + timezone, "ccc, dd MMM | hh:mm:ss a"),
-    speed: `${speed.toFixed()} km/h`,
+    speed: `${speed.toFixed()} ${
+      searchParams.units === "metric" ? "m/s" : "ms/h"
+    }`,
     main_condition: main,
     ...forecast,
   };
