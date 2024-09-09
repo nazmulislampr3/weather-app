@@ -60,7 +60,7 @@ const MainWeather = ({
     <div className="flex flex-col justify-center items-center text-4xl lg:text-5xl">
       <div className="font-extrabold">{location}</div>
       <div className="flex items-center mt-10">
-        <img className="w-40 lg:w-52" src={icon} alt="icon" />
+        <img className="w-32 md:w-40 lg:w-52" src={icon} alt="icon" />
         <div className="-ml-3">
           <div className="flex gap-2 items-center">
             <div className="font-bold" style={{ fontSize: "1.5em" }}>

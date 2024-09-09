@@ -5,7 +5,7 @@ import UnitButtons from "./UnitButtons";
 
 const MainData = ({ weather }: { weather: Weather }) => {
   return (
-    <div className="h-full overflow-y-auto lg:overflow-hidden grid lg:grid-cols-2 gap-10 px-4 scrollbar">
+    <div className="h-full overflow-y-auto lg:overflow-hidden grid lg:grid-cols-2 gap-10 px-1 lg:px-4 scrollbar">
       <div className="mx-auto lg:hidden">
         <UnitButtons />
       </div>
