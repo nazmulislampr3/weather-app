@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply leading-[1];
+  }
+  html,
+  body {
+    @apply text-white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(126, 144, 180, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(126, 144, 180, 0.3);
+  }
+
+  .scrollbar {
+    /* width */
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+  .searchbarIcon {
+    @apply h-full bg-blue-600 aspect-square flex items-center justify-center text-sm lg:text-xl border-l border-white transition-all;
+    &:hover {
+      svg {
+        @apply hover:scale-125;
+      }
+    }
+  }
+  .unitBtns {
+    button {
+      @apply text-2xl font-bold hover:scale-110;
+    }
+  }
+}
